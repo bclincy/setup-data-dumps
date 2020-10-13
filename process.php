@@ -256,8 +256,29 @@ $data['countries'] = [
     'ZW' => 'Zimbabwe',
 ];
 
-echo Yaml::dump($data);
+$data['providences'] = json_decode(file_get_contents('https://gist.githubusercontent.com/pbojinov/a87adf559d2f7e81d86ae67e7bd883c7/raw/f34362c96cce2e40b1cab4e330f4affb6c12d37e/canada_states_titlecase.json'));
+$isCreatedStateCountryJSON = saveFile($data, 'statesProvidenceCountries', 'JSON');
+$isStatesJSON = saveFile($data['states'], 'states', 'JSON');
+$isCreatedCountryJSON = saveFile($data['countries'], 'countries', 'JSON');
+$isStatesJSON = saveFile($data['providences'], 'providences');
+$isCreatedStateCountryYml = saveFile($data, 'statesProvidenceCountries');
+$isStatesJSON = saveFile($data['states'], 'states');
 
 $zipcodes = file_get_contents('https://raw.githubusercontent.com/scpike/us-state-county-zip/master/geo-data.csv');
 
-var_dump(array_map('str_getcsv', explode("\n", $zipcodes)));
+$zips = (array_map('str_getcsv', explode("\n", $zipcodes)));
+$zip['zipcodes'] = array_map(function ($row) {
+    list($id, $state, $abr, $zipcode, $county, $city) = array_values($row);
+    return [$abr, $zipcode, $county, $city];
+}, $zips);
+array_shift($zip['zipcodes']);
+$isCreatedZips = saveFile($zip, 'zipcodes', 'JSON');
+$isCreatedZipsYml = saveFile($zip, 'zipcodes');
+
+function saveFile (array $data, string $fileName, string $type = 'YAML'): bool 
+{
+    return $type === 'JSON' ? file_put_contents($fileName .'.json', json_encode($data)) 
+        : file_put_contents($fileName . '.yaml', Yaml::dump($data));
+}
+
+
