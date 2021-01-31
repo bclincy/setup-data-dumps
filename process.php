@@ -256,6 +256,64 @@ $data['countries'] = [
     'ZW' => 'Zimbabwe',
 ];
 
+$boardsPositiions = [
+    [
+        'title' => 'Board of Directors',
+        'description' => 'A board of directors is the group of people responsible for 
+        the strategic management of a for-profit or nonprofit corporation. Depending on 
+        the size of the board, the members might run the business activities of the 
+        organization or oversee office staff that handle the day-to-day duties. The board 
+        operates by following the corporation’s bylaws, a set of rules that governs how the 
+        organization must pursue its mission and activities.'
+    ],
+    [
+        'title' => 'President/Chairman of the Board',
+        'description' => 'The top position of a board is the chairman, chairperson or sometimes 
+        simply chair, who often serves as the president of the organization. In his chairman\'s role, 
+        the board member runs board meetings, appoints committees and performs other duties as directed 
+        by the bylaws. As president, this individual represents the organization in public by 
+        giving speeches, writing articles and attending functions on behalf of the organization.'
+    ],
+    [
+        'title' => 'Vice President/Vice Chair', 
+        'description' => 'Serving directly under the chair is the vice chair or vice president. This 
+        person is often next in line to become the chair and serves as the board’s leader when the chair 
+        is not present, such as during official board meetings. Some organizations have multiple vice 
+        presidents comprising an executive committee. In that case, this position is known as the first 
+        vice president.'
+    ],
+    [
+        'title' => 'Secretary',
+        'description' => 'The secretary of a board takes notes, called minutes, at board meetings, then submits those minutes 
+        for amendment or approval by the board. If the organization does not have a business office, the 
+        secretary keeps its records and its non-financial legal documents, including its bylaws, articles 
+        of incorporation and minutes of historical meetings.'
+    ],
+    [
+        'title' => 'Treasurer',
+        'description' => 'The treasurer of a board keeps the organization’s financial records, unless 
+        the organization has a professional accountant or business manager. In that case, the treasurer 
+        keeps copies of the main financial records, signs checks the business manager or accountant 
+        writes, approves purchases and invoices and otherwise oversees and keeps an eye on the 
+        organization’s finances. The treasurer also prepares and delivers a treasurer’s report at 
+        each of the board’s official meetings and approves the organization’s annual tax filing. Many 
+        smaller organizations combine the secretary and treasurer positions, giving this position the 
+        title of secretary/treasurer.'
+    ],
+    [
+        'title' => 'Board Members',
+        'description' => 'Board members who do not have one of the previously discussed roles often 
+        volunteer to head committees such as a marketing or website committee. These board members 
+        attend meetings, receive updates and vote on board matters. They have the right to make motions, 
+        discuss them and vote on them. These positions come with a chairperson title, such as a marketing 
+        committee chair. After serving as a board member, these individuals might ascend to the secretary, 
+        treasurer, vice chair and eventually chairman of the board positions. Some board members represent 
+        specific geographic areas, often when the organization is a nonprofit with members. For example, a 
+        board might have northern, southern, eastern and western districts, with a board member required 
+        to reside within the boundaries of her district.'
+    ],
+    
+];
 $data['providences'] = json_decode(file_get_contents('https://gist.githubusercontent.com/pbojinov/a87adf559d2f7e81d86ae67e7bd883c7/raw/f34362c96cce2e40b1cab4e330f4affb6c12d37e/canada_states_titlecase.json'));
 $isCreatedStateCountryJSON = saveFile($data, 'statesProvidenceCountries', 'JSON');
 $isStatesJSON = saveFile($data['states'], 'states', 'JSON');
