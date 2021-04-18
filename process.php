@@ -314,13 +314,15 @@ $boardsPositiions = [
     ],
     
 ];
-$data['providences'] = json_decode(file_get_contents('https://gist.githubusercontent.com/pbojinov/a87adf559d2f7e81d86ae67e7bd883c7/raw/f34362c96cce2e40b1cab4e330f4affb6c12d37e/canada_states_titlecase.json'));
+$data['providences'] = file_get_contents('https://gist.githubusercontent.com/pbojinov/a87adf559d2f7e81d86ae67e7bd883c7/raw/f34362c96cce2e40b1cab4e330f4affb6c12d37e/canada_states_titlecase.json');
+file_put_contents('providence.json', $data['providences']);
 $isCreatedStateCountryJSON = saveFile($data, 'statesProvidenceCountries', 'JSON');
 $isStatesJSON = saveFile($data['states'], 'states', 'JSON');
 $isCreatedCountryJSON = saveFile($data['countries'], 'countries', 'JSON');
 $isStatesJSON = saveFile($data['providences'], 'providences');
 $isCreatedStateCountryYml = saveFile($data, 'statesProvidenceCountries');
 $isStatesJSON = saveFile($data['states'], 'states');
+$isBoardMembers = saveFile($boardsPositiions, 'boardmembers', 'JSON');
 
 $zipcodes = file_get_contents('https://raw.githubusercontent.com/scpike/us-state-county-zip/master/geo-data.csv');
 
