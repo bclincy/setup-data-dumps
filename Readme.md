@@ -1,8 +1,24 @@
+
 [![goodtables.io](https://goodtables.io/badge/github/datasets/country-codes.svg)](https://goodtables.io/github/datasets/country-codes)
+
+# Purpose
+I've developed a streamlined project setup tool that automates the population of essential data,
+ such as states and board member titles, and city and zipcodes into your database. This tool leverages GitHub for easy version control and distribution. Originally written in PHP, it can be adapted to any language that supports JSON and YAML. By utilizing this tool, I've significantly reduce the time spent on initial project setup, my hopes is it will help you too.
 
 # Start Up Data for Projects.
 
-I have composed this repo to populate apps setup data. A list of states and country in one YAML. I got the information and translated in process.php
+If resources are outdated you can update the sources with process.php script. Updating sources you will need to have:
+* [PHP](https://php.net/download) command line installed
+* PHP's Package Manager [Composer](https://getcomposer.org/download) 
+
+
+Make any edit to sources and in the terminal run the script:
+
+```bash 
+composer install
+
+php process.php
+```
 
 ### Using the Data
 
@@ -13,15 +29,6 @@ I consume it via a URL inside of my programming using both using YAML, I've incl
 ### Help
 
 Please feel free to create a pull request. Fork the repo and make your changes and submit a pull request.
-
-### Running new Dataset
-
-The PHP process will use repos and outside sources to rebuild files. You'll need the package Manager [Composer](http://getcomposer.org)
-On the bash or terminal:
-```bash 
-composer install
-php process.php
-```
 
 ## Shoutouts!
 

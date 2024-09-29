@@ -1,55 +1,5 @@
 states:
-    - { AL: Alabama }
-    - { AK: Alaska }
-    - { AZ: Arizona }
-    - { AR: Arkansas }
-    - { CA: California }
-    - { CO: Colorado }
-    - { CT: Connecticut }
-    - { DE: Delaware }
-    - { DC: 'District of Columbia' }
-    - { FL: Florida }
-    - { GA: Georgia }
-    - { HI: Hawaii }
-    - { ID: Idaho }
-    - { IL: Illinois }
-    - { IN: Indiana }
-    - { IA: Iowa }
-    - { KS: Kansas }
-    - { KY: Kentucky }
-    - { LA: Louisiana }
-    - { ME: Maine }
-    - { MD: Maryland }
-    - { MA: Massachusetts }
-    - { MI: Michigan }
-    - { MN: Minnesota }
-    - { MS: Mississippi }
-    - { MO: Missouri }
-    - { MT: Montana }
-    - { NE: Nebraska }
-    - { NV: Nevada }
-    - { NH: 'New Hampshire' }
-    - { NJ: 'New Jersey' }
-    - { NM: 'New Mexico' }
-    - { NY: 'New York' }
-    - { NC: 'North Carolina' }
-    - { ND: 'North Dakota' }
-    - { OH: Ohio }
-    - { OK: Oklahoma }
-    - { OR: Oregon }
-    - { PA: Pennsylvania }
-    - { RI: 'Rhode Island' }
-    - { SC: 'South Carolina' }
-    - { SD: 'South Dakota' }
-    - { TN: Tennessee }
-    - { TX: Texas }
-    - { UT: Utah }
-    - { VT: Vermont }
-    - { VA: Virginia }
-    - { WA: Washington }
-    - { WV: 'West Virginia' }
-    - { WI: Wisconsin }
-    - { WY: Wyoming }
+    states: { AL: Alabama, AK: Alaska, AZ: Arizona, AR: Arkansas, CA: California, CO: Colorado, CT: Connecticut, DE: Delaware, DC: 'District of Columbia', FL: Florida, GA: Georgia, HI: Hawaii, ID: Idaho, IL: Illinois, IN: Indiana, IA: Iowa, KS: Kansas, KY: Kentucky, LA: Louisiana, ME: Maine, MD: Maryland, MA: Massachusetts, MI: Michigan, MN: Minnesota, MS: Mississippi, MO: Missouri, MT: Montana, NE: Nebraska, NV: Nevada, NH: 'New Hampshire', NJ: 'New Jersey', NM: 'New Mexico', NY: 'New York', NC: 'North Carolina', ND: 'North Dakota', OH: Ohio, OK: Oklahoma, OR: Oregon, PA: Pennsylvania, RI: 'Rhode Island', SC: 'South Carolina', SD: 'South Dakota', TN: Tennessee, TX: Texas, UT: Utah, VT: Vermont, VA: Virginia, WA: Washington, WV: 'West Virginia', WI: Wisconsin, WY: Wyoming }
 countries:
     AF: Afghanistan
     AL: Albania
@@ -284,7 +234,7 @@ countries:
     UZ: Uzbekistan
     VU: Vanuatu
     VE: Venezuela
-    VN: 'Viet Nam'
+    VN: Vietnam
     VG: 'Virgin Islands, British'
     VI: 'Virgin Islands, U.s.'
     WF: 'Wallis And Futuna'
@@ -293,16 +243,16 @@ countries:
     ZM: Zambia
     ZW: Zimbabwe
 providences:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
+    - { name: Alberta, abbreviation: AB }
+    - { name: 'British Columbia', abbreviation: BC }
+    - { name: Manitoba, abbreviation: MB }
+    - { name: 'New Brunswick', abbreviation: NB }
+    - { name: 'Newfoundland and Labrador', abbreviation: NL }
+    - { name: 'Northwest Territories', abbreviation: NT }
+    - { name: 'Nova Scotia', abbreviation: NS }
+    - { name: Nunavut, abbreviation: NU }
+    - { name: Ontario, abbreviation: 'ON' }
+    - { name: 'Prince Edward Island', abbreviation: PE }
+    - { name: Quebec, abbreviation: QC }
+    - { name: Saskatchewan, abbreviation: SK }
+    - { name: 'Yukon Territory', abbreviation: YT }
